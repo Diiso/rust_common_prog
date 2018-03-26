@@ -1,0 +1,6 @@
+[package]
+name = "common_prog"
+version = "0.1.0"
+authors = ["lou <louismontaut@gmail.com>"]
+
+[dependencies]
