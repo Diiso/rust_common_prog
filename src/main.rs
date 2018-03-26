@@ -88,8 +88,59 @@ fn main() {
     let x = 5;
     let y = 10;
     let z = muliply(x,y);
-    println!("The value of {} by {} is: {}", x, y, z);
+    //println!("The value of {} by {} is: {}", x, y, z);
     //In the end, remember that there is a huge difference between statements and expressions
+
+    //-----------CONTROL FLOW----------------
+    //      IF STATEMENTS
+    let number = 3;
+
+    if number < 5 {
+        println!("Ok");
+    } else {
+        println!("Not ok");
+    }
+
+    // if in a let :
+    let condition = false;
+    let number = if condition {
+        5
+    } else {
+        6
+    };
+    //println!("The value of number is: {}", number);
+
+    //Both values in the if and else MUST BE THE SAME TYPE
+
+    //      LOOPS
+    let mut k = 0;
+    // loop {
+    //     k = k+1;
+    //     println!("k = {}", k);
+    //     if k == 1000 {
+    //         break;
+    //     }
+    // }
+
+    // while k < 1000 {
+    //     k = k+1;
+    //     println!("k = {}", k);
+    // }
+
+    let T = [10,11,12,13,14];
+
+    // for number in T.iter(){
+    //     println!("The current value is: {}", number);
+    // }
+    //
+    // for number in 0..T.len() {
+    //     println!("The current value of the index {} is: {}", number, T[number]);
+    // }
+
+    let n = 40;
+    let fib = fibonacci(n);
+    println!("The {}th value of the fibonacci sequence is: {}", n, fib);
+
 }
 
 //As far as I understood, you need to input the type of the function parameters
@@ -101,4 +152,16 @@ fn another_function(x: i32) {
 fn muliply(x: i32, y: i32) -> i32 {
     let z = x*y;
     z
+}
+
+
+fn fibonacci(n: i32) -> i32 {
+    if n == 1 {
+        1
+    } else if n == 2 {
+        2
+    }
+    else{
+        fibonacci(n-1)+fibonacci(n-2)
+    }
 }
